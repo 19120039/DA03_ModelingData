@@ -96,8 +96,12 @@ with form:
     model_type = st.selectbox(
         "Choose Model:", ["Decicison Tree", "Logistic Regression"], index=1
     )
-    image = Image.open('fake-news-3.png')
-    st.image(image)
+    if (model_type == "Decicison Tree"):
+        image = Image.open('decisiontree.png')
+        st.image(image)
+    else:
+        image = Image.open('fake-news-3.png')
+        st.image(image)
     user_input = st.text_input("Write your incredible News here:")
     cols = st.columns(2)
     submitted = st.form_submit_button(label = "Enter your News")
