@@ -103,6 +103,9 @@ with form:
     user_input = st.text_input("Write your incredible News here:")
     cols = st.columns(2)
     submitted = st.form_submit_button(label = "Enter your News")
+    if (user_input == ""):
+        st.error("Oops, You forgot to write your News!")
+        return
 
 if submitted:
     user_input_df = Precprocess_input(user_input)
