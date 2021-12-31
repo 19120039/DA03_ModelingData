@@ -107,9 +107,9 @@ with form:
     cols = st.columns(2)
     submitted = st.form_submit_button(label = "Enter your News")
     if (user_input == ""):
-        submitted = False
+        submitted = 99
 
-if submitted:
+if submitted != 99:
     user_input_df = Precprocess_input(user_input)
     with st.spinner('Loading the result...'):
             time.sleep(5)
