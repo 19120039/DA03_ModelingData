@@ -104,11 +104,11 @@ with form:
 
 if submitted:
     user_input_df = Precprocess_input(user_input)
-    if (model_type == "Decicison Tree"):
-        output = tree.predict(user_input_df)
-        with st.spinner('Loading the result...'):
+    with st.spinner('Loading the result...'):
             time.sleep(5)
             st.write('Done!')
+    if (model_type == "Decicison Tree"):
+        output = tree.predict(user_input_df)
         if(output == 0):
             st.warning("Becareful, this is Fake News!!! \n\n\n If not, Please check your News!")
         if (output == 1):
