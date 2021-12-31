@@ -9,7 +9,6 @@ import time
 from underthesea import sent_tokenize
 from underthesea import classify
 from underthesea import word_tokenize
-import matplotlib.pyplot as plt
 import seaborn as sns 
 import pandas as pd
 import numpy as np
@@ -22,18 +21,18 @@ from sklearn.tree import DecisionTreeClassifier
 from PIL import Image
 
 
-tree = pickle.load(open(r"C:\Users\dell\Desktop\New folder\decisiontree.sav", "rb"))
+tree = pickle.load(open("decisiontree.sav", "rb"))
 
 
-clf = pickle.load(open(r"C:\Users\dell\Desktop\New folder\logisticregression.sav", "rb"))
+clf = pickle.load(open("logisticregression.sav", "rb"))
 
 
-vector = pickle.load(open(r"C:\Users\dell\Desktop\New folder\vectorize.sav", "rb"))
+vector = pickle.load(open("vectorize.sav", "rb"))
 
 
 # Các hàm tiền xử lý ================================
 
-file_stopwords = r"C:\Users\dell\Desktop\New folder\stopwords.txt"
+file_stopwords = "stopwords.txt"
 
 with open(file_stopwords, 'r', encoding="utf-8") as f:
     stopwords = f.readlines()
