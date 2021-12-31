@@ -97,7 +97,7 @@ with form:
         "Choose Model:", ["Decicison Tree", "Logistic Regression"], index=1
     )
     if (model_type == "Decicison Tree"):
-        image = Image.open('decisiontree.png')
+        image = Image.open('decisiontree.jpg')
         st.image(image)
     else:
         image = Image.open('fake-news-3.png')
