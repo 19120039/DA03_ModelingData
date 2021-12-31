@@ -89,13 +89,9 @@ st.sidebar.write(
     "For details, please contact via trietphanminh@gmail.com"
 )
 
-form = st.form(key="annotation")
-
     #cols = st.columns((10, 10))
-model_type = st.selectbox(
-        "Choose Model:", ["Decicison Tree", "Logistic Regression"], index=1
-   )
-image = Image.open(r'C:\Users\dell\Desktop\STEAMLIT\fake-news-3.png')
+model_type = st.selectbox("Choose Model:", ["Decicison Tree", "Logistic Regression"], index = 1)
+image = Image.open('fake-news-3.png')
 st.image(image)
 user_input = st.text_input("Write your incredible News here:")
 cols = st.columns(2)
