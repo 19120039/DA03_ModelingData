@@ -76,7 +76,7 @@ def Precprocess_input(user_input):
 
 
 
-st.set_page_config(page_title="Awesome Tool-App that detect any Fake News!", page_icon="🐞", layout="centered")
+st.set_page_config(page_title="Awesome Tool-App that detect any Fake News!", page_icon="📣", layout="centered")
 
 st.title("Awesome Tool-App that detect any Fake News!")
 
