@@ -101,11 +101,11 @@ with form:
        image = Image.open('fake-news-3.png')
        st.image(image)
     user_input = st.text_input("Write your incredible News here:")
-    cols = st.columns(2)
-    submitted = st.form_submit_button(label = "Enter your News")
     if (user_input == ""):
         st.error("Oops, You forgot to write your News!")
         submitted = False
+    cols = st.columns(2)
+    submitted = st.form_submit_button(label = "Enter your News")
 
 if submitted:
     user_input_df = Precprocess_input(user_input)
