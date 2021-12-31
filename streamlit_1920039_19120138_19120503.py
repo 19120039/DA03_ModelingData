@@ -106,6 +106,8 @@ with form:
         submitted = False
     cols = st.columns(2)
     submitted = st.form_submit_button(label = "Enter your News")
+    if (user_input == ""):
+        submitted = False
 
 if submitted:
     user_input_df = Precprocess_input(user_input)
